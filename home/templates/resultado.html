@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container resultado-container">
+        <h1>Resumo do Vídeo</h1>
+
+        <div class="resultado-section">
+            <h2>{{ video.titulo }}</h2>
+            <p>{{ video.resumo }}</p>
+        </div>
+
+        <div class="botoes">
+            <a href="{% url 'home' %}" class="botao-voltar">Voltar para o início</a>
+        </div>
+    </div>
+</body>
+</html>
+

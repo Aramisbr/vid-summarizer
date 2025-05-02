@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo de Vídeo</title>
+  
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+<body>
+  <div class="container">
+    <h1>Resumo de Vídeo</h1>
+    <form id="upload-form" method="POST" enctype="multipart/form-data" onsubmit="startProgress()">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="titulo">Título do Vídeo:</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Digite o título do vídeo" required>
+      </div>
+      <div class="form-group">
+        <label for="video">Upload do Vídeo:</label>
+        <input type="file" name="video" id="video" accept="video/*" required>
+      </div>
+      <button type="submit">Enviar Vídeo</button>
+    </form>
+    <div id="progress-container" style="display:none; margin-top:20px;">
+      <p id="progress-message" style="margin-bottom:10px; font-weight:bold;">Processando vídeo...</p>
+      <div id="progress-bar" style="width:0%; height:30px; background-color:#4caf50; border-radius:6px; text-align:center; color:white; line-height:30px;">
+        <span id="progress-text">0%</span>
+      </div>  
+    </div>
+  </div>
+
+  <script>
+    function startProgress() {
+
+        document.querySelector('form').style.display = 'none';
+        document.getElementById('progress-container').style.display = 'block';
+    
+        let progress = 0;
+        const bar = document.getElementById('progress-bar');
+        const text = document.getElementById('progress-text');
+
+        const interval = setInterval(() => {
+            if (progress < 100) {
+            progress++;
+            bar.style.width = progress + '%';
+            text.textContent = progress + '%';
+        } else {
+            clearInterval(interval);
+        }
+    }, 150);
+  }
+    </script>    
+</body>
+</html>
