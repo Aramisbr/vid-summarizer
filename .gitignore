@@ -10,3 +10,4 @@ audio_file/
 media/
 db.sqlite3
 .env
+core/settings.py
