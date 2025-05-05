@@ -1,4 +1,4 @@
-🎬 Vid Summarizer 🎬
+## 🎬 Vid Summarizer 🎬
 
 **Resumo automático de vídeos com transcrição em português usando MoviePy, Fast-Whisper e OpenAI.**
 
