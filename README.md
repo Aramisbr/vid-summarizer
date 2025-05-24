@@ -1,6 +1,6 @@
 ## 🎬 Vid Summarizer 🎬
 
-**Resumo automático de vídeos com transcrição em português usando MoviePy, Fast-Whisper e OpenAI.**
+**Resumo automático de vídeos com transcrição em português usando MoviePy, Faster-Whisper e OpenAI.**
 
 ## 📌 Descrição
 
@@ -8,7 +8,7 @@ O Vid Summarizer é uma aplicação web que permite aos usuários enviar vídeos
 
 ## 🚀 Tecnologias Utilizadas
 
-* Django, MoviePy, Fast-Whisper, OpenAI GPT-3.5 Turbo, Python 3.10+.
+* Django, MoviePy, Faster-Whisper, OpenAI GPT-3.5 Turbo, Python 3.10+.
 
 ---
 
