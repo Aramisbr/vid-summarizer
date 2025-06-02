@@ -8,7 +8,11 @@ O Vid Summarizer é uma aplicação web que permite aos usuários enviar vídeos
 
 ## 🚀 Tecnologias Utilizadas
 
-* Django, MoviePy, Faster-Whisper, OpenAI GPT-3.5 Turbo, Python 3.10+.
+* Django
+* MoviePy
+* Faster-Whisper
+* OpenAI GPT-3.5 Turbo
+* Python 3.10+.
 
 ---
 
